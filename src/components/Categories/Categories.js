@@ -16,5 +16,4 @@ export default class Categories extends Component{
     </Fragment>
     );
   }
-
 }
