@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 
 export const HeqaderText = styled.h1`
-	padding: 0px 14px 10px 14px;
+	
 `;
 
 // export const StrikeDirection = styled.span`
