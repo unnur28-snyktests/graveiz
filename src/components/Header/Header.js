@@ -1,9 +1,10 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { WrapHeader, HeaderText, WrapperMenuHeader,InnerHeader, WrapSocial, WrapPhoneHeader, WrapLang } from './style/Header-styled';
+import { WrapHeader, WrapperMenuHeader,InnerHeader, WrapSocial, WrapPhoneHeader, WrapLang, LogoIcon, WrapperIconLogo } from './style/Header-styled';
 import connect from "react-redux/es/connect/connect";
 import { setLocal } from '../../redux/actions/locale';
 import PopupSocial from './PopupSocial';
+import imgLogo from '../../images/logo_icon.png';
 
 class Header extends React.Component {
   constructor(props) {
@@ -32,8 +33,10 @@ class Header extends React.Component {
       <Fragment>
         <WrapHeader>
           <InnerHeader>
-            <HeaderText> </HeaderText>
             <WrapperMenuHeader>
+              {/*<WrapperIconLogo href='/'>*/}
+                {/*<LogoIcon src={`${imgLogo}`} />*/}
+              {/*</WrapperIconLogo>*/}
               <WrapLang>
                 <div onClick={()=> {this.props.setLocal('en'); this.addLocalstorage('en')}}>EN</div>
                   <span>|</span>
@@ -41,6 +44,7 @@ class Header extends React.Component {
               </WrapLang>
               <WrapSocial>
                 <div onClick={()=> { this.showSocial() }}>Follow Us</div>
+                <div className="contactUs" onClick={()=> { this.showSocial() }}>Contact Us</div>
                 <PopupSocial isPopupOpen={this.state.isPopupOpen} closeSocial={this.closeSocial} />
               </WrapSocial>
               <WrapPhoneHeader>

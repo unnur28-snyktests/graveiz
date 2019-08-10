@@ -1,15 +1,25 @@
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
-//import imgShow from '../../../images/open-trades/show-content.jpg';
+// import logoIcon from '../../../images/logo_icon.png';
 
 export const WrapHeader = styled.div`
   background: #000;
   color: #cdcdcd;
   border-bottom: 1px solid #333; 
-  font-size: 0.55rem;
+  font-size: 8.6px;
+  font-weight: 300;
   letter-spacing: .10em;
   text-transform: uppercase;
+  letter-spacing: 2.125px;
 `;
+export const WrapperIconLogo = styled.a`
+  display: inline-block;
+  width: 25px;
+`;
+export const LogoIcon = styled.img`
+  width: 100%;
+`;
+
 export const InnerHeader = styled.div`
   ${breakpoint('lg') `
     padding-right: 15px;
@@ -18,9 +28,6 @@ export const InnerHeader = styled.div`
     margin-left: auto;
     max-width: 1370px;
   `}
-`;
-export const HeaderText = styled.h1`
-	
 `;
 export const WrapperMenuHeader = styled.div`
   display: block;
@@ -31,10 +38,14 @@ export const WrapperMenuHeader = styled.div`
       cursor: pointer;
     }
   }
+  .contactUs{
+    margin: 0 20px
+  }
 `;
 
 export const WrapLang = styled.div` 
   padding: 0 12px;
+  margin: 17px 0;
   span{
     padding: 0 4px;
   }
@@ -54,6 +65,26 @@ export const SocialPopup = styled.div`
   position: absolute;
   top: 0;
   left: 0;
+  cursor: initial !important;
+  span {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    a {
+        svg {
+            width: 15px !important;
+            height: 15px;
+            background: #fff;
+            padding: 7px;
+            border-radius: 50%;
+            cursor: pointer;
+          path{
+            fill: #000;
+          }
+        }
+      }
+    }
 `;
 export const WrapPhoneHeader = styled.div`
   a{
