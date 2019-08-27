@@ -1,8 +1,6 @@
 import React, { Fragment } from 'react';
-import {BrowserRouter} from 'react-router-dom';
 import {createGlobalStyle} from "styled-components";
 import Header from "./Header/Header";
-import Routing from "./Routing";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -13,12 +11,10 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export default () => (
+export default (props) => (
   <Fragment>
     <GlobalStyle />
       <Header />
-      <BrowserRouter>
-        <Routing />
-      </BrowserRouter>
+    {props.children}
   </Fragment>
 );

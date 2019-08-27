@@ -4,7 +4,7 @@ import { WrapHeader, WrapperMenuHeader,InnerHeader, WrapSocial, WrapPhoneHeader,
 import connect from "react-redux/es/connect/connect";
 import { setLocal } from '../../redux/actions/locale';
 import PopupSocial from './PopupSocial';
-import imgLogo from '../../images/logo_icon.png';
+import {Link} from "react-router-dom";
 
 class Header extends React.Component {
   constructor(props) {
@@ -34,17 +34,19 @@ class Header extends React.Component {
         <WrapHeader>
           <InnerHeader>
             <WrapperMenuHeader>
-              {/*<WrapperIconLogo href='/'>*/}
-                {/*<LogoIcon src={`${imgLogo}`} />*/}
-              {/*</WrapperIconLogo>*/}
+              <WrapperIconLogo href='/'>
+                <LogoIcon />
+              </WrapperIconLogo>
               <WrapLang>
                 <div onClick={()=> {this.props.setLocal('en'); this.addLocalstorage('en')}}>EN</div>
                   <span>|</span>
                 <div onClick={()=> {this.props.setLocal('ru'); this.addLocalstorage('ru')}}>RU</div>
               </WrapLang>
               <WrapSocial>
-                <div onClick={()=> { this.showSocial() }}>Follow Us</div>
-                <div className="contactUs" onClick={()=> { this.showSocial() }}>Contact Us</div>
+                <div onClick={()=> { this.showSocial() }} className="followUs">Follow Us</div>
+                <Link to="/location">
+                  <div className="contactUs" >Boutique locator</div>
+                </Link>
                 <PopupSocial isPopupOpen={this.state.isPopupOpen} closeSocial={this.closeSocial} />
               </WrapSocial>
               <WrapPhoneHeader>

@@ -1,17 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { IntlProvider } from 'react-intl';
-import Layout from './Layout';
 import { addLocaleData } from "react-intl";
 import en from 'react-intl/locale-data/en';
 import ru from 'react-intl/locale-data/ru';
 import { connect } from 'react-redux';
-import messages from '../translations/messages'
+import messages from '../../translations/messages'
 
 addLocaleData(en);
 addLocaleData(ru);
 
-class App extends React.Component {
+class TranslateProvider extends React.Component {
   constructor(props){
     super(props);
     this.state = {
@@ -19,16 +18,16 @@ class App extends React.Component {
     };
   }
   render() {
-    const { lang } = this.props;
+    const { lang, children } = this.props;
     return (
       <IntlProvider locale={lang} messages={messages[lang]}>
-        <Layout />
+        { children }
       </IntlProvider>
     );
   }
 }
 
-App.propTypes = {
+TranslateProvider.propTypes = {
   lang: PropTypes.string.isRequired,
 };
 
@@ -38,4 +37,4 @@ const mapStateToProps =(state) => {
   }
 };
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps)(TranslateProvider);

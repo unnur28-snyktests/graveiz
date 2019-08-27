@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
 import { store } from "./redux/store";
 import Provider from "react-redux/es/components/Provider";
 import { setLocal } from './redux/actions/locale';
 import {ThemeProvider} from 'styled-components';
+import {BrowserRouter} from "react-router-dom";
+import Layout from "./components/Layout";
+import Routing from "./components/Routing";
+import TranslateProvider from "./provider/Translate";
 
 if (localStorage.alhubLang) {
   store.dispatch(setLocal(localStorage.alhubLang));
@@ -21,10 +24,19 @@ const theme = {
 };
 
 ReactDOM.render(
+
   <Provider store={store}>
     <ThemeProvider theme={theme}>
-      <App />
+      <TranslateProvider>
+          <BrowserRouter>
+            <Layout>
+            <Routing />
+            </Layout>
+          </BrowserRouter>
+      </TranslateProvider>
     </ThemeProvider>
   </Provider>
+
+
   , document.getElementById('root'));
 

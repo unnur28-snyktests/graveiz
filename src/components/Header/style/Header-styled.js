@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
-// import logoIcon from '../../../images/logo_icon.png';
+import logoIcon from '../../../images/logo_icon.png';
 
 export const WrapHeader = styled.div`
   background: #000;
@@ -15,9 +15,21 @@ export const WrapHeader = styled.div`
 export const WrapperIconLogo = styled.a`
   display: inline-block;
   width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 12px;
+  ${breakpoint('lg')`
+    left: 0px;
+  `}
 `;
 export const LogoIcon = styled.img`
   width: 100%;
+  height: 100%;
+  background: url(${logoIcon}) no-repeat center;
+  background-size: cover;
 `;
 
 export const InnerHeader = styled.div`
@@ -32,6 +44,7 @@ export const InnerHeader = styled.div`
 export const WrapperMenuHeader = styled.div`
   display: block;
   text-align: right;
+  position: relative;
   div{
     display: inline-block;
     &:hover{
@@ -39,13 +52,20 @@ export const WrapperMenuHeader = styled.div`
     }
   }
   .contactUs{
-    margin: 0 20px
+    color: #fff;
+  }
+  .followUs{
+    padding: 0 12px;
+    color: #fff;
   }
 `;
 
 export const WrapLang = styled.div` 
   padding: 0 12px;
   margin: 17px 0;
+  div{
+    cursor: pointer;
+  }
   span{
     padding: 0 4px;
   }
@@ -62,10 +82,11 @@ export const SocialPopup = styled.div`
   width: 100%;
   height: 100%;    
   background-color: rgba(0,0,0,.8);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   cursor: initial !important;
+  z-index: 1;
   span {
     position: absolute;
     top: 40%;
