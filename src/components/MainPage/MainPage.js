@@ -1,12 +1,37 @@
-import React, { Component, Fragment } from 'react';
-import {HeqaderText} from './style/MainPage-styled';
+import React, { Component } from 'react';
+import {HeqaderText, MainPageWrapper, MainBanner, SecondBanner, ThirdBanner} from './style/MainPage-styled';
 import { Link } from 'react-router-dom';
 import {FormattedMessage, FormattedHTMLMessage} from 'react-intl';
 
 export default class MainPage extends Component{
   render() {
     return (
-		<Fragment>
+      <MainPageWrapper>
+        <MainBanner>
+          <div className="mianLogo">
+            <h1>Graveiz</h1>
+            <h2>Gewerly</h2>
+          </div>
+        </MainBanner>
+
+        <SecondBanner>
+          <div className="wrapDiscover">
+            <h3>Name collection</h3>
+            <h4>Small description collection</h4>
+            <Link to="/coolection-one">
+              discover
+            </Link>
+          </div>
+        </SecondBanner>
+        <ThirdBanner>
+          <div className="wrapDiscover">
+            <h3>Name collection</h3>
+            <h4>Small description collection</h4>
+            <Link to="/coolection-one">
+              discover
+            </Link>
+          </div>
+        </ThirdBanner>
       <div>
         <h1 className="App-title">
           <FormattedMessage id="app.title"/>
@@ -21,7 +46,7 @@ export default class MainPage extends Component{
       <Link to="/Products">
         Categories Page
       </Link>
-    </Fragment>
+    </MainPageWrapper>
     );
   }
 
