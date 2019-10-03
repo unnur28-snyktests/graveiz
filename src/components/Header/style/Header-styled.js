@@ -3,6 +3,9 @@ import breakpoint from 'styled-components-breakpoint';
 import logoIcon from '../../../images/logo_icon.png';
 
 export const WrapHeader = styled.div`
+  position: fixed;
+  width: 100%;
+  top: 0;
   background: #000;
   color: #cdcdcd;
   border-bottom: 1px solid #333; 
@@ -11,6 +14,7 @@ export const WrapHeader = styled.div`
   letter-spacing: .10em;
   text-transform: uppercase;
   letter-spacing: 2.125px;
+  z-index: 1;
 `;
 export const WrapperIconLogo = styled.a`
   display: inline-block;
