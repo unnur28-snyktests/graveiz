@@ -1,6 +1,13 @@
 {
   "vulnerabilityAlerts": {
     "labels": ["security"],
-    "assignees": ["@rarkins"]
-  }
+    "assignees": ["@lapanton"]
+  },
+  "packageRules": [
+    {
+      "packageNames": ["npm", "yarn"],
+      "automerge": false
+    }
+  ],
+  "postUpdateOptions": ["yarnDedupeHighest"]
 }
