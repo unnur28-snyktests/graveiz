@@ -1,5 +1,4 @@
-[![Known Vulnerabilities]
-https://snyk.io/test/github/lapanton/graveiz/badge.svg)]
+[![Known Vulnerabilities](https://snyk.io/test/github/lapanton/graveiz/badge.svg)]
 (https://snyk.io/test/github/lapanton/graveiz)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
