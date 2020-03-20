@@ -1,9 +1,9 @@
 {
-  "name": "cakes",
+  "name": "Graveiz",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "google-map-react": "^1.1.4",
+    "google-map-react": "^1.1.6",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-intl": "^4.0.0",
