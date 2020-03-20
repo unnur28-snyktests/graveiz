@@ -1,8 +1,6 @@
-<*a href="https://snyk.io/test/github/lapanton/graveiz">
 [![Known Vulnerabilities]
 https://snyk.io/test/github/lapanton/graveiz/badge.svg)]
 (https://snyk.io/test/github/lapanton/graveiz)
-</a>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
