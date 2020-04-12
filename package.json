@@ -9,7 +9,7 @@
     "react-intl": "^4.0.0",
     "react-redux": "^7.0.0",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "3.4.0",
+    "react-scripts": "3.4.1",
     "redux-store": "0.0.0",
     "styled-components": "^4.4.1",
     "styled-components-breakpoint": "^2.1.1"
